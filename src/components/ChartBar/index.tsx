@@ -40,7 +40,7 @@ export function ChartBar({ data }: IProps) {
 				],
 			},
 		});
-	}, [initial, setInitial]);
+	}, [initial, setInitial, data]);
 
 	return (
 		<div className="grid-content-area">
