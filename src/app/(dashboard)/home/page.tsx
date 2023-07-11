@@ -21,7 +21,7 @@ export default function Dashboard() {
 
 	useEffect(() => {
 		verifyAuthenticated();
-	}, []);
+	}, [verifyAuthenticated]);
 
 
 	return (
