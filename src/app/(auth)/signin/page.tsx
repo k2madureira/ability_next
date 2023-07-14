@@ -129,7 +129,7 @@ const SignIn: React.FC<ISignInProps> = () => {
 							>
 								<Input placeholder="E-mail" 
 									style={{
-										width: matchesMedia1024? "20vw" :"60vw"
+										width: matchesMedia1024? "20rem" :"25rem"
 									}}
 								/>
 							</Form.Item>
@@ -143,7 +143,7 @@ const SignIn: React.FC<ISignInProps> = () => {
 								]}
 							>
 								<Input.Password placeholder="Password" style={{
-										width: matchesMedia1024? "20vw" :"60vw"
+										width: matchesMedia1024? "20rem" :"25rem"
 									}}/>
 							</Form.Item>
 			
