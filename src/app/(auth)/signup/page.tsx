@@ -137,7 +137,7 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 							rules={[{ required: true, message: 'Por favor, informe o nome' }]}
 							>
 								<Input placeholder='Nome'style={{
-										width: matchesMedia1024? "20vw" :"60vw"
+										width: matchesMedia1024? "20rem" :"25rem"
 									}}/>
 							</Form.Item>
 
@@ -155,7 +155,7 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 								]}
 							>
 								<Input placeholder='E-mail' style={{
-										width: matchesMedia1024? "20vw" :"60vw"
+										width: matchesMedia1024? "20rem" :"25rem"
 									}}/>
 							</Form.Item>
 
@@ -194,7 +194,7 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 								]}
 							>
 								<Input.Password placeholder='Senha' style={{
-										width: matchesMedia1024? "20vw" :"60vw"
+										width: matchesMedia1024? "20rem" :"25rem"
 									}}/>
 							</Form.Item>
 
@@ -240,7 +240,7 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 								]}
 							>
 								<Input.Password placeholder='Confirmação de senha' style={{
-										width: matchesMedia1024? "20vw" :"60vw"
+										width: matchesMedia1024? "20rem" :"25rem"
 									}}/>
 							</Form.Item>
 
@@ -254,7 +254,7 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 									loading={isLoadingStates}
 									options={!isErrorStates && dataStates ?dataStates?.map(instrument=> ({ label: instrument.name, value: instrument.id })) : []}
 									style={{
-										width: matchesMedia1024? "20vw" :"60vw"
+										width: matchesMedia1024? "20rem" :"25rem"
 									}}
 									/>
 							</Form.Item>
