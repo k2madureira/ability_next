@@ -1,9 +1,8 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
-import { 
-  Modal, 
+import {  
   Button,
   Form,
   Input,
@@ -30,6 +29,7 @@ export interface ISignInProps {}
 
 const SignIn: React.FC<ISignInProps> = (props) => {
 	const matchesMedia = useMediaQuery('(min-width: 740px)');
+	const matchesMedia1024 = useMediaQuery('(min-width: 1024px)');
 	const { mutate, isSuccess, isError, error, reset } = useMutateUserSignUp();
   const [messageApi, contextHolder] = message.useMessage();
   const {data: dataStates, isLoading: isLoadingStates, isError:isErrorStates } = useFetchStates();
@@ -134,15 +134,15 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 							<Divider />
 							<Form.Item 
 							name="firstName"
-							label="Nome"
 							rules={[{ required: true, message: 'Por favor, informe o nome' }]}
 							>
-								<Input />
+								<Input placeholder='Nome'style={{
+										width: matchesMedia1024? "20vw" :"60vw"
+									}}/>
 							</Form.Item>
 
 							<Form.Item
 								name="email"
-								label="E-mail"
 								rules={[
 									{
 										type: 'email',
@@ -154,11 +154,12 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 									},
 								]}
 							>
-								<Input />
+								<Input placeholder='E-mail' style={{
+										width: matchesMedia1024? "20vw" :"60vw"
+									}}/>
 							</Form.Item>
 
 							<Form.Item
-								label="Senha"
 								name="password"
 								hasFeedback
 								rules={[
@@ -192,11 +193,12 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 								
 								]}
 							>
-								<Input.Password/>
+								<Input.Password placeholder='Senha' style={{
+										width: matchesMedia1024? "20vw" :"60vw"
+									}}/>
 							</Form.Item>
 
 							<Form.Item
-								label="Confirmação senha"
 								name="passwordConfirmation"
 								hasFeedback
 								dependencies={['password']}
@@ -237,20 +239,24 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 									}),
 								]}
 							>
-								<Input.Password />
+								<Input.Password placeholder='Confirmação de senha' style={{
+										width: matchesMedia1024? "20vw" :"60vw"
+									}}/>
 							</Form.Item>
 
 							<Form.Item
-								label="Estado"
 								name="stateId"
 								rules={[{ required: true, message: 'Por favor, selecione o estado!' }]}
 								>
 								<Select
 									placeholder="Selecione o estado"
-									style={{ width: 335 }}
+									
 									loading={isLoadingStates}
 									options={!isErrorStates && dataStates ?dataStates?.map(instrument=> ({ label: instrument.name, value: instrument.id })) : []}
-								/>
+									style={{
+										width: matchesMedia1024? "20vw" :"60vw"
+									}}
+									/>
 							</Form.Item>
 
 							<Divider />
@@ -259,7 +265,6 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 								style={{ 
 									color: "var(--white)", 
 									backgroundColor: "var(--fuchsia-950)",
-									marginLeft: "6vw"
 								}} 
 								type='primary' 
 								form="student-form" 
