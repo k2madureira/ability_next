@@ -20,7 +20,7 @@ export function NavBar({ isHome =false, txt }:IProps){
       <S.Nav tabIndex={0}>
           {
             isHome ? 
-            <h2>Welcome, <span>{txt}</span></h2> : 
+            <h2>Olá, <span>{txt}</span></h2> : 
             <h2/>
           }
           

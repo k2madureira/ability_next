@@ -77,9 +77,9 @@ const SignIn: React.FC<ISignInProps> = () => {
 				</header>
 				<main>
 					<h3>
-						Start your <br /> musical journey
+						Comece a sua <br /> jornada musical
 					</h3>
-					<p>Discover the best site for monitoring musical studies!</p>
+					<p>O melhor site para acompanhamento do estudo musical!</p>
 				</main>
 				<footer>
 					<WomanImage
@@ -96,12 +96,12 @@ const SignIn: React.FC<ISignInProps> = () => {
 				{contextHolder}
 				<div className="ContentContainer">
 					<div className="ContentTitle">
-						<h1>Welcome</h1>
+						<h1>Bem vindo (a)</h1>
 					</div>
 
 					<main>
 						<p>
-							Don&apos;t have a account? <Link href="/signup">Register</Link>
+							Não possui uma conta? <Link href="/signup">Cadastre-se</Link>
 						</p>
 						<Form
 							id='signin-form'
@@ -129,7 +129,7 @@ const SignIn: React.FC<ISignInProps> = () => {
 							>
 								<Input placeholder="E-mail" 
 									style={{
-										width: matchesMedia1024? "20rem" :"25rem"
+										width: matchesMedia1024? "20rem" :"21rem"
 									}}
 								/>
 							</Form.Item>
@@ -143,7 +143,7 @@ const SignIn: React.FC<ISignInProps> = () => {
 								]}
 							>
 								<Input.Password placeholder="Password" style={{
-										width: matchesMedia1024? "20rem" :"25rem"
+										width: matchesMedia1024? "20rem" :"21rem"
 									}}/>
 							</Form.Item>
 			
@@ -164,7 +164,7 @@ const SignIn: React.FC<ISignInProps> = () => {
 						
 						</Form>
 						<div className="MainFooter">
-							<a href="">Forgot password?</a>
+							<Link href="/forgot">Esqueceu a senha?</Link>
 							<div className="Line">
 								<hr />
 							</div>
