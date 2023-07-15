@@ -91,10 +91,10 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 					</div>
 				</header>
 				<main>
-					<h3>Are you ready ?</h3>
+					<h3>Você esta pronto(a) ?</h3>
 					<p>
-						Sign up now and enjoy great
-						<br /> musical accompaniment
+						Cadastre-se e aproveite dessa
+						<br /> incrível jornada musical
 					</p>
 				</main>
 				<footer>
@@ -112,12 +112,12 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 			<Content>
 				<div className="ContentContainer">
 					<div className="ContentTitle">
-						<h1>Sign Up</h1>
+						<h1>Faça parte</h1>
 					</div>
 
 					<main>
 						<p>
-							Already have a account? <Link href="/signin">SignIn</Link>
+							Já possui uma conta? <Link href="/signin">SignIn</Link>
 						</p>
 						
 						{contextHolder}
@@ -137,7 +137,7 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 							rules={[{ required: true, message: 'Por favor, informe o nome' }]}
 							>
 								<Input placeholder='Nome'style={{
-										width: matchesMedia1024? "20rem" :"25rem"
+										width: matchesMedia1024? "25rem" :"22rem"
 									}}/>
 							</Form.Item>
 
@@ -155,7 +155,7 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 								]}
 							>
 								<Input placeholder='E-mail' style={{
-										width: matchesMedia1024? "20rem" :"25rem"
+										width: matchesMedia1024? "25rem" :"22rem"
 									}}/>
 							</Form.Item>
 
@@ -194,7 +194,7 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 								]}
 							>
 								<Input.Password placeholder='Senha' style={{
-										width: matchesMedia1024? "20rem" :"25rem"
+										width: matchesMedia1024? "25rem" :"22rem"
 									}}/>
 							</Form.Item>
 
@@ -240,7 +240,7 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 								]}
 							>
 								<Input.Password placeholder='Confirmação de senha' style={{
-										width: matchesMedia1024? "20rem" :"25rem"
+										width: matchesMedia1024? "25rem" :"22rem"
 									}}/>
 							</Form.Item>
 
@@ -254,7 +254,7 @@ const SignIn: React.FC<ISignInProps> = (props) => {
 									loading={isLoadingStates}
 									options={!isErrorStates && dataStates ?dataStates?.map(instrument=> ({ label: instrument.name, value: instrument.id })) : []}
 									style={{
-										width: matchesMedia1024? "20rem" :"25rem"
+										width: matchesMedia1024? "25rem" :"22rem"
 									}}
 									/>
 							</Form.Item>
