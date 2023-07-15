@@ -22,3 +22,13 @@ export interface SignIn {
 }
 
 export interface SignInResponse extends SignIn {}
+
+export interface Forgot {
+  email: string;
+}
+
+export interface ForgotResponse extends SignIn {}
+
+export interface ForgotRequest {
+  email: string;
+}

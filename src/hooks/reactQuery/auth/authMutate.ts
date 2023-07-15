@@ -1,5 +1,6 @@
 import { useMutation } from "react-query";
-import { api, bearerToken, baseURL } from "@/services/api";
+import { api } from "@/services/api";
+import { Forgot, ForgotResponse } from "@/hooks/dto/Iauth.dto";
 
 const signIn = async (body: any): Promise<any> => {
   return api.post<any>(`/auth/sign-in`, body);
@@ -21,6 +22,20 @@ const signUp = async (body: any): Promise<any> => {
 export function useMutateUserSignUp() {
   const mutate = useMutation({
     mutationFn: signUp,
+    onSuccess: () => {},
+  });
+
+  return mutate;
+}
+
+const forgot = async (body: Forgot): Promise<ForgotResponse> => {
+  const response = await api.post<any>(`/auth/forgot-password`, body);
+  return response.data;
+};
+
+export function useMutateUserforgot() {
+  const mutate = useMutation({
+    mutationFn: forgot,
     onSuccess: () => {},
   });
 
